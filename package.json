@@ -1,0 +1,35 @@
+{
+	"name": "tetra-master-api",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"start": "node dist/index.js",
+		"dev": "nodemon src/index.ts",
+		"build": "tsc"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/displaycoffee/tetra-master-api.git"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.25",
+		"@types/node": "^25.5.0",
+		"@types/swagger-ui-express": "^4.1.8",
+		"nodemon": "^3.1.14",
+		"typescript": "^5.9.3",
+		"ts-node": "^10.9.2"
+	},
+	"dependencies": {
+		"express": "^4.22.1",
+		"swagger-ui-express": "^5.0.1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"bugs": {
+		"url": "https://github.com/displaycoffee/tetra-master-api/issues"
+	},
+	"homepage": "https://github.com/displaycoffee/tetra-master-api#readme"
+}
