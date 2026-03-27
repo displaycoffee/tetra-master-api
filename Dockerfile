@@ -10,12 +10,16 @@ RUN npm run build
 FROM node:20-alpine
 WORKDIR /app
 COPY package*.json ./
+
 # Only install production dependencies (no devDependencies)
 RUN npm install --omit=dev
+
 # Copy only the compiled JS from the builder stage
 COPY --from=builder /app/dist ./dist
+
 # If you are importing swagger.json, ensure it's copied over
 COPY --from=builder /app/src/swagger.json ./dist/swagger.json
 
+#Stage 3: Expose port and run command
 EXPOSE 3000
-CMD ["node", "dist/index.js"]
+CMD ['node', 'dist/index.js']

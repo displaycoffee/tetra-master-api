@@ -1,0 +1,26 @@
+export const cards = [
+	{
+		id: 1,
+		handle: 'goblin-1',
+		field: 'card',
+		label: 'Goblin',
+		stats: '0P00',
+		dropped: ['enemy 01', 'Enemy 02', 'enemy 03'],
+		found: 'location 01',
+		won: 'person 01',
+		missable: false,
+		image: '/assets/dist/images/cactaur.png',
+	},
+	{
+		id: 2,
+		handle: 'fang-2',
+		field: 'card',
+		label: 'Fang',
+		stats: '0P00',
+		dropped: ['Enemy 02'],
+		found: 'location 02',
+		won: 'person 02',
+		missable: false,
+		image: '/assets/dist/images/cactaur.png',
+	},
+];
