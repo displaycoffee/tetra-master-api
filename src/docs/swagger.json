@@ -1,0 +1,77 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "Tetra Master API",
+		"description": "API for managing and retrieving card data for Tetra Master.",
+		"version": "1.5.0"
+	},
+	"servers": [
+		{
+			"url": "https://tetra-master-api.neverend.org",
+			"description": "Production server"
+		},
+		{
+			"url": "http://localhost:3000",
+			"description": "Local development"
+		}
+	],
+	"paths": {
+		"/cards": {
+			"get": {
+				"summary": "Retrieve a list of cards",
+				"responses": {
+					"200": {
+						"description": "A list of card objects",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/Card"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"Card": {
+				"type": "object",
+				"required": ["dropped", "found", "handle", "id", "image", "label", "missable", "won"],
+				"properties": {
+					"id": { "type": "integer" },
+					"label": { "type": "string" },
+					"handle": { "type": "string" },
+					"image": { "type": "string" },
+					"missable": { "type": "boolean" },
+					"dropped": {
+						"type": "array",
+						"items": { "type": "string" }
+					},
+					"found": {
+						"type": "array",
+						"items": { "type": "string" }
+					},
+					"won": {
+						"type": "array",
+						"items": { "type": "string" }
+					}
+				},
+				"example": {
+					"id": 1,
+					"label": "Goblin",
+					"handle": "goblin-1",
+					"image": "https://tetra-master-api.neverend.org/assets/images/goblin.png",
+					"missable": false,
+					"dropped": ["Enemy 01", "Enemy 02", "Enemy 03"],
+					"found": ["Location 01", "Location 02"],
+					"won": ["Person 01"]
+				}
+			}
+		}
+	}
+}

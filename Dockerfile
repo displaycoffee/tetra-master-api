@@ -11,15 +11,18 @@ FROM node:20-alpine
 WORKDIR /app
 COPY package*.json ./
 
-# Only install production dependencies (no devDependencies)
+# Only install production dependencies
 RUN npm install --omit=dev
 
-# Copy only the compiled JS from the builder stage
+# 1. Copy the compiled JS
 COPY --from=builder /app/dist ./dist
 
-# If you are importing swagger.json, ensure it's copied over
-COPY --from=builder /app/src/swagger.json ./dist/swagger.json
+# 2. Copy the public assets (images, etc.)
+COPY --from=builder /app/public ./public
 
-#Stage 3: Expose port and run command
+# 3. Copy swagger.json (if it's not already bundled by esbuild)
+COPY --from=builder /app/src/docs/swagger.json ./dist/swagger.json
+
+# Stage 3: Expose port and run command
 EXPOSE 3000
-CMD ['node', 'dist/index.js']
+CMD ["node", "dist/index.js"]
