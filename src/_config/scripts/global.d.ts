@@ -5,11 +5,14 @@ type CardFormatted = CardUnformatted & {
 };
 
 type CardUnformatted = {
+	category: string;
 	dropped: string[];
 	found: string[];
 	id: number;
 	label: string;
 	missable: boolean;
+	repeatable: boolean;
+	type: string;
 	won: string[];
 };
 
