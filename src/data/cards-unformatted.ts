@@ -895,7 +895,7 @@ export const cardsUnformatted: CardsUnformattedType = [
 		category: '',
 		dropped: ['Enemy 02'],
 		found: ['Location 01', 'Location 02'],
-		label: 'Hilde Garde 3',
+		label: 'Hilda Garde 3',
 		missable: false,
 		repeatable: false,
 		type: '6P31',
