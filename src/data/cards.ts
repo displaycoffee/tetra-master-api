@@ -6,7 +6,7 @@ import { cardsUnformatted } from './cards-unformatted';
 /* Export and create formatted card list */
 export const cards: CardsFormattedType = cardsUnformatted.map((card) => {
 	// Card variables
-	const handle = utils.handleize(card.label);
+	const handle = utils.handleize(card.name);
 
 	// Return formatted card
 	return {

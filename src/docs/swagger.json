@@ -41,10 +41,10 @@
 		"schemas": {
 			"Card": {
 				"type": "object",
-				"required": ["dropped", "found", "handle", "id", "image", "label", "missable", "won"],
+				"required": ["dropped", "found", "handle", "id", "image", "name", "missable", "won"],
 				"properties": {
 					"id": { "type": "integer" },
-					"label": { "type": "string" },
+					"name": { "type": "string" },
 					"handle": { "type": "string" },
 					"image": { "type": "string" },
 					"missable": { "type": "boolean" },
@@ -63,7 +63,7 @@
 				},
 				"example": {
 					"id": 1,
-					"label": "Goblin",
+					"name": "Goblin",
 					"handle": "goblin-1",
 					"image": "https://tetra-master-api.neverend.org/assets/images/goblin.png",
 					"missable": false,
