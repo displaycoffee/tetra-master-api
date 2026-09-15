@@ -18,8 +18,8 @@ const found = {
 	},
 };
 
-export const cards: CardTestType[] = [
-	{
+export const cards: CardTestType = {
+	goblin: {
 		id: 1,
 		//category: Category.Monster,
 		dropped: [{ name: 'Goblin' }],
@@ -30,7 +30,7 @@ export const cards: CardTestType[] = [
 		type: '0P00',
 		won: [npc.nobleLady],
 	},
-	{
+	fang: {
 		id: 2,
 		//category: Category.Monster,
 		dropped: [{ name: 'Fang' }],
@@ -41,7 +41,7 @@ export const cards: CardTestType[] = [
 		type: '0P00',
 		won: [npc.nobleLady],
 	},
-];
+};
 
 export const cardsUnformatted: CardsUnformattedType = [
 	{

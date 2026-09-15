@@ -21,15 +21,17 @@ type CardsFormatted = CardFormatted[];
 type CardsUnformatted = CardUnformatted[];
 
 type CardTest = {
-	id: number;
-	//category: Category;
-	dropped: Enemy[];
-	found: Location[];
-	name: string;
-	missable: boolean;
-	repeatable: boolean;
-	type: string;
-	won: NPC[];
+	[key: string]: {
+		id: number;
+		//category: Category;
+		dropped: Enemy[];
+		found: Location[];
+		name: string;
+		missable: boolean;
+		repeatable: boolean;
+		type: string;
+		won: NPC[];
+	};
 };
 
 type Enemy = {
