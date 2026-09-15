@@ -1,6 +1,8 @@
 .DS_Store
 .env
-.husky
+.astro/
+.claude/
+.husky/
 .vscode/
 coverage/
 node_modules/
