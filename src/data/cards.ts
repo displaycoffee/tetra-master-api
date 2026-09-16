@@ -1,6 +1,6 @@
 /* Local scripts */
-import { utils } from '../_config/scripts/utils';
-import { variables } from '../_config/scripts/variables';
+import { utils } from '../_core/scripts/utils';
+import { variables } from '../_core/scripts/variables';
 import { cardsUnformatted } from './cards-unformatted';
 
 /* Export and create formatted card list */
