@@ -1,7 +1,8 @@
 {
 	"name": "tetra-master-api",
-	"version": "1.5.0",
+	"displayName": "Tetra Master API",
 	"description": "Final Fantasy IX Tetra Master card API.",
+	"version": "1.5.0",
 	"main": "dist/index.js",
 	"type": "module",
 	"keywords": [],
