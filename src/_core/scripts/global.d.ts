@@ -23,7 +23,6 @@ type CardsUnformatted = CardUnformatted[];
 type CardTest = {
 	[key: string]: {
 		id: number;
-		//category: Category;
 		dropped: Enemy[];
 		found: Location[];
 		name: string;
@@ -49,7 +48,7 @@ type NPC = {
 };
 
 declare global {
-	/* Declare global types */
+	// Declare global types
 	type CardsFormattedType = CardsFormatted;
 
 	type CardsUnformattedType = CardsUnformatted;
