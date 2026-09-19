@@ -1,4 +1,4 @@
-/* Local scripts */
+/* Scripts */
 import { utils } from '../_core/scripts/utils';
 import { variables } from '../_core/scripts/variables';
 import { cardsUnformatted } from './cards-unformatted';

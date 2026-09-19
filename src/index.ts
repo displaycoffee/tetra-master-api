@@ -1,10 +1,10 @@
 /* Packages */
+import type { Request, Response } from 'express';
 import path from 'path';
 import express from 'express';
-import type { Request, Response } from 'express';
 import swaggerUi from 'swagger-ui-express';
 
-/* Local scripts */
+/* Scripts */
 import { variables } from './_core/scripts/variables';
 import { cards } from './data/cards';
 import swaggerDocument from './docs/swagger.json' with { type: 'json' };
