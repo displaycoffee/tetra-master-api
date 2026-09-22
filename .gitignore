@@ -3,6 +3,7 @@
 .astro/
 .claude/
 .husky/
+.tanstack/
 .vscode/
 coverage/
 node_modules/
